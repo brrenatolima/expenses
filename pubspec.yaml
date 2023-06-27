@@ -1,0 +1,60 @@
+name: expenses
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0-384.0.dev <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.18.1
+  location: ^4.4.0
+  provider: ^6.0.5
+  http: ^0.13.6
+  universal_io: ^2.2.0
+  firebase_core: ^2.13.1
+  firebase_auth: ^4.6.2
+  firebase_storage: ^11.2.2
+  image_picker: ^0.8.7+5
+  path_provider: ^2.0.15
+  expenses_pk:
+    git:
+      url: https://github.com/brrenatolima/expenses_pk.git
+      ref: main
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+ 
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+#fonts:
+#  - family: OpenSans
+#    fonts:
+#      - asset: assets/fonts/OpenSans-Italic-VariableFont_wdth.ttf
+#      - asset: assets/fonts/OpenSans-VariableFont_wdth.ttf
+#  - family: QuickSand
+#    fonts:
+#     - asset: assets/fonts/Quicksand-VariableFont_wght.ttf
+
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Italic-VariableFont_wdth.ttf
+        - asset: assets/fonts/OpenSans-VariableFont_wdth.ttf
+          style: normal
+    - family: Quicksand
+      fonts:
+        - asset: assets/fonts/Quicksand-VariableFont_wght.ttf
+          weight: 700
+
+

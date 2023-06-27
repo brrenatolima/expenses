@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "985420975432",
+    "firebase_url": "https://flutterexpenses-devrenatolima-default-rtdb.firebaseio.com",
+    "project_id": "flutterexpenses-devrenatolima",
+    "storage_bucket": "flutterexpenses-devrenatolima.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985420975432:android:2f01d92c247d8f6bf0f77d",
+        "android_client_info": {
+          "package_name": "com.example.expenses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985420975432-3emcnhmad2pe8pe7n8d6lj65kglkonj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdqlkIaTsKGZgBp3nGrWSefmy5YrY3-Xo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985420975432-3emcnhmad2pe8pe7n8d6lj65kglkonj9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

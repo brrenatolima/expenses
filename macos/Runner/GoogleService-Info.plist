@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>985420975432-b3u7t0phrpb5s8hcbon20heci1379j77.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.985420975432-b3u7t0phrpb5s8hcbon20heci1379j77</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB6fqFy9o1k-LVl9q7ck2LQmMvBNGiy31E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>985420975432</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.expenses.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>flutterexpenses-devrenatolima</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flutterexpenses-devrenatolima.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:985420975432:ios:a3f4e4fef82a2b71f0f77d</string>
+	<key>DATABASE_URL</key>
+	<string>https://flutterexpenses-devrenatolima-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
