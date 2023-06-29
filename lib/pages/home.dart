@@ -162,9 +162,7 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    if (auth.currentUser == null) {
-      Navigator.of(context).pushNamed(RoutesPaths.LOGIN_SCREEN);
-    }
+    
 
     bool isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
 
@@ -216,7 +214,10 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
           }
         });
 
-    return Platform.isIOS
+        
+
+    return auth.currentUser != null ?
+       Platform.isIOS
         ? CupertinoPageScaffold(
             navigationBar: appBar as ObstructingPreferredSizeWidget,
             child: pageBody,
@@ -234,6 +235,17 @@ class _HomeState extends State<Home> with WidgetsBindingObserver {
                       onPressed: () => _startAddNewTransaction(context),
                     ),
             ),
-          );
+          )
+          :
+          TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(
+                            RoutesPaths.LOGIN_SCREEN
+                          );
+                        }, 
+                        child: const Text("Faça login para continuar")
+                        )
+          // Navigator.of(context).pushNamed(RoutesPaths.LOGIN_SCREEN)
+          ;
   }
 }

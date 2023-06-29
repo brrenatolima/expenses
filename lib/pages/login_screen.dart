@@ -71,16 +71,14 @@ class _LogInScreenState extends State<LogInScreen> {
                         ElevatedButton(
                             onPressed: () => {login()},
                             child: const Text("Login")),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         TextButton(
-                            onPressed: () {
-                              Navigator.of(context)
-                                  .pushNamed(RoutesPaths.CREATE_ACCOUNT_SCREEN);
+                            onPressed: () => {
+                              Navigator.of(context).pushNamed(RoutesPaths.CREATE_ACCOUNT_SCREEN)
                             },
-                            child: Text("Não tem conta? Cadastre-se!")
-                          ),
+                            child: const Text("Não tem conta? Cadastre-se!")),
                       ],
                     )
             ],
