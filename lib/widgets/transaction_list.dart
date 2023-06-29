@@ -1,6 +1,6 @@
 import 'package:expenses/providers/transactions_provider.dart';
 import 'package:expenses/services/transactions_service.dart';
-import 'package:expenses/widgets/edit_transaction.dart';
+// import 'package:expenses/widgets/edit_transaction.dart';
 import 'package:expenses/widgets/transaction_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -33,14 +33,14 @@ class _TransactionListState extends State<TransactionList> {
     super.didUpdateWidget(oldWidget);
   }
 
-  void _startEditTransaction(BuildContext ctx, Transaction trans) {
-    showModalBottomSheet(
-      context: ctx,
-      builder: (_) {
-        return EditTransaction(transaction: trans);
-      },
-    );
-  }
+  // void _startEditTransaction(BuildContext ctx, Transaction trans) {
+  //   showModalBottomSheet(
+  //     context: ctx,
+  //     builder: (_) {
+  //       return EditTransaction(transaction: trans);
+  //     },
+  //   );
+  // }
 
 
   TransactionsService service = TransactionsService();
@@ -51,7 +51,7 @@ class _TransactionListState extends State<TransactionList> {
     final provider = Provider.of<TransactionProvider>(context);
 
     return FutureBuilder(
-        future: service.list(),
+        future: provider.list(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -70,8 +70,9 @@ class _TransactionListState extends State<TransactionList> {
                           ? const NoTransactions()
                           : ListView(
                               children: _generateListTransactions(list),
-                              //_generateListTransactions(transaction);
-                            )));
+                            )
+                         )
+                     );
             } else {
               return const Center(child: Text("Lista de Transações vazia!"));
             }

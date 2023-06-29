@@ -57,8 +57,21 @@ class TransactionProvider with ChangeNotifier {
     
   }
 
-  void editTransaction(String id, Transaction transaction) {
+  void editTransaction(String id, Transaction transaction, File? image) {
+    final firebaseStorage = FirebaseStorage.instance;
+    if (image != null) {
+      // firebaseStorage.ref("transactions/${transaction.id}");
+      transaction.imageUrl = "transactions/${transaction.id}";
+    }
     service.update(id, transaction);
+    if (image != null) {
+        
+        final reference = firebaseStorage.ref("transactions/${transaction.id}");
+        final upload = reference.putFile(image);
+        upload.whenComplete(() {
+          print("Upload realizado com sucesso.");
+          });
+      }
     items.removeWhere((element) => element.id == id);
     items.add(transaction);
 

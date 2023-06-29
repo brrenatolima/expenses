@@ -204,7 +204,7 @@ Future<void> pickImage() async {
                 child: Row(
                   children: [
                     Expanded(
-                      child: image == null ? Text("Anexe uma foto") : Image.file(image!),
+                      child: image == null ? Text("Anexe uma foto") : kIsWeb ? Image.network(image!.path) : Image.file(image!),
                       ),
                       IconButton(onPressed: pickImage, icon: Icon(Icons.camera)),
                       IconButton(onPressed: removeImage, icon: Icon(Icons.remove_circle)),

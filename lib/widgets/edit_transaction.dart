@@ -4,6 +4,7 @@ import 'dart:io';
 
 import 'package:expenses/models/transaction.dart';
 import 'package:expenses/providers/transactions_provider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
@@ -127,7 +128,7 @@ class _EditTransactionState extends State<EditTransaction> {
           date: selectedDate!); //service.show(id) as Transaction;
 
       tr.location = _locationController.text;
-      provider.editTransaction(tr.id, tr);
+      provider.editTransaction(tr.id, tr, image);
       Navigator.of(context).pop();
     }
 
@@ -156,7 +157,7 @@ class _EditTransactionState extends State<EditTransaction> {
                     ? imageBytes == null
                         ? CircularProgressIndicator()
                         : Image.memory(imageBytes!)
-                    : Image.file(image!),
+                    : kIsWeb ? Image.network(image!.path) : Image.file(image!),
 
                 IconButton(
                     onPressed: removeImage, icon: Icon(Icons.remove_circle)),
@@ -221,7 +222,7 @@ class _EditTransactionState extends State<EditTransaction> {
                               : futureBuilder
                           : Row(
                               children: [
-                                Image.file(image!),
+                                kIsWeb ? Image.network(image!.path) : Image.file(image!),
                                 IconButton(
                                     onPressed: removeImage,
                                     icon: Icon(Icons.remove_circle)),
