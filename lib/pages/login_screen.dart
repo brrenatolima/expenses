@@ -48,8 +48,7 @@ class _LogInScreenState extends State<LogInScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(50.0),
           child: Column(
@@ -80,13 +79,13 @@ class _LogInScreenState extends State<LogInScreen> {
                               Navigator.of(context)
                                   .pushNamed(RoutesPaths.CREATE_ACCOUNT_SCREEN);
                             },
-                            child: Text("Não tem conta? Cadastre-se!")),
+                            child: Text("Não tem conta? Cadastre-se!")
+                          ),
                       ],
                     )
             ],
           ),
         ),
-      ),
     );
   }
 }

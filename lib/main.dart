@@ -73,8 +73,8 @@ class _MainAppState extends State<MainApp> {
         themeMode: ThemeMode.system,
       // home: const Home(),
       routes: {
-        RoutesPaths.HOME: (context) => Home(),
-        RoutesPaths.LOGIN_SCREEN: (context) => LogInScreen(),
+        RoutesPaths.HOME: (context) => const Home(),
+        RoutesPaths.LOGIN_SCREEN: (context) => const LogInScreen(),
          RoutesPaths.CREATE_ACCOUNT_SCREEN: (context) => CreateAccountScreen(),
       },
     );
